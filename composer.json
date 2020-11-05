@@ -1,0 +1,54 @@
+{
+    "name": "nascentafrica/laravellocale",
+    "description": "",
+    "keywords": [
+        "nascentafrica",
+        "laravellocale"
+    ],
+    "homepage": "https://github.com/nascentafrica/laravellocale",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Anitche Chisom",
+            "email": "anitchec.dev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1|^8.0",
+        "illuminate/support": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NascentAfrica\\LaravelLocale\\": "src/NascentAfrica"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NascentAfrica\\LaravelLocale\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NascentAfrica\\LaravelLocale\\LaravelLocaleServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLocale": "NascentAfrica\\LaravelLocale\\LaravelLocaleFacade"
+            }
+        }
+    }
+}
